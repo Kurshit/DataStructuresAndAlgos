@@ -148,7 +148,7 @@ public class SerializeAndDeserialize {
 
 		Node newHead = serialize.deserialize(result);
 
-		btree.preOrderNode(newHead);
+		btree.preOrder(newHead);
 		
 		result = serialize.serializeLevelOrder(btree.root);
 		

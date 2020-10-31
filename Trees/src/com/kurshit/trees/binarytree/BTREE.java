@@ -76,7 +76,7 @@ public class BTREE {
 
 	}
 	
-	private void preOrder(final Node newRoot) {
+	public void preOrder(final Node newRoot) {
 		
 		if(newRoot == null)
 			return;
@@ -84,6 +84,31 @@ public class BTREE {
 		System.out.print(newRoot.data + " ");
 		preOrder(newRoot.left);
 		preOrder(newRoot.right);
+	}
+	
+	public void levelOrderTraversalNode(Node newRoot) {
+
+		if(newRoot == null) 
+			return;
+
+		Queue<Node> queue = new LinkedList<>();
+
+		queue.offer(newRoot);
+
+		while(!queue.isEmpty()) {
+			Node temp = queue.poll();
+			System.out.print(temp.data + " ");
+
+			if(temp.left != null) {
+				queue.offer(temp.left);
+			} 
+
+			if(temp.right !=null) {
+				queue.offer(temp.right);
+			}
+
+		}
+
 	}
 	
 	public void inOrder() {

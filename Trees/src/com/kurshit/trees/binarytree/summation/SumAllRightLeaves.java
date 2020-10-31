@@ -1,7 +1,7 @@
 package com.kurshit.trees.binarytree.summation;
 
-import com.gfg.algos.trees.binarytree.BTREE;
-import com.gfg.algos.trees.bst.BST.Node;
+import com.kurshit.trees.binarytree.BTREE;
+import com.kurshit.trees.binarytree.BTREE.Node;
 
 public class SumAllRightLeaves {
 	

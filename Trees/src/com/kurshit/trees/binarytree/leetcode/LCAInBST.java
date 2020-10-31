@@ -1,6 +1,7 @@
 package com.kurshit.trees.binarytree.leetcode;
 
-import com.kurshit.trees.binarytree.BTREE.Node;
+import com.kurshit.trees.binarytree.bst.BST;
+import com.kurshit.trees.binarytree.bst.BST.Node;
 
 public class LCAInBST {
 	
