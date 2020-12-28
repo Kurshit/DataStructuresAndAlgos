@@ -1,5 +1,7 @@
 package com.kurshit.trees.binarytree.bst;
 
+import com.kurshit.trees.binarytree.BTREE.Node;
+
 public class BST {
 
 	public Node root;
@@ -159,6 +161,30 @@ public class BST {
 		 *    10  
 		 *      
 		 */
+
+	}
+	
+	public void createSampleForEdgeRemoval() {
+		
+		root = new Node(3); 
+		root.left = new Node(2);
+		root.right = new Node(5);
+		root.left.left = new Node(1);
+		root.left.right = new Node(4);
+		
+		root.right.left = root.left.right;		
+		
+
+		/*
+				  	   3
+					  / \
+					 2   5
+					/ \ /
+				   1   4
+		
+		 */	
+
+
 
 	}
 

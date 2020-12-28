@@ -22,50 +22,6 @@ public class IsSumSameCoveredUncoveredNodes {
 		
 	}
 	
-	//this ain't working
-	
-	/*public int unCoveredSumIterative(Node root) {
-		
-		if(root == null)
-			return 0;
-		
-		Node curr = root;
-		
-		int unCoveredSum = 0;
-		
-		while(curr.left != null || curr.right != null) {
-			
-			if(curr.left == null && curr.right != null) {
-				unCoveredSum = unCoveredSum + curr.data;
-				curr = curr.right;
-			}
-			
-			unCoveredSum = unCoveredSum + curr.data;	
-			
-			if(curr.left != null) 
-				curr = curr.left;
-		}
-		
-		curr = root.right;
-		
-		while(curr.left != null || curr.right != null) {
-			
-			if(curr.right == null && curr.left != null) {
-				unCoveredSum = unCoveredSum + curr.data;
-				curr = curr.left;
-			}
-			
-			unCoveredSum = unCoveredSum + curr.data;	
-			
-			if(curr.right != null) 
-				curr = curr.right;
-		}
-		
-		
-						
-		return unCoveredSum;
-		
-	}*/
 	
 	public int unCoveredSum(Node root) {
 		

@@ -1,4 +1,4 @@
-package com.kurshit.trees.binarytree.summation;
+package com.kurshit.trees.binarytree.traversals;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -11,7 +11,7 @@ public class DGraphSampleApp {
         g.addEdge(1,1);
         g.addEdge(2,3);
 
-        g.breathFirstTraversal(2);
+        g.breadthFirstTraversal(2);
         g.depthFirstTraversal(2);
 
     }

@@ -1,5 +1,9 @@
 package com.kurshit.dp.gfg.easy.subsetproblems;
 
+/*
+ * Source : https://www.geeksforgeeks.org/subset-sum-problem-dp-25/
+ */
+
 public class SubsetSumExists {
 	
 	public boolean hasSubsetSumRecursion(int[] nums, int N, int S) {
@@ -48,9 +52,14 @@ public class SubsetSumExists {
 	
 	public static void main(String[] args) {
 		
-		int[] nums = {2, 3, 7, 8, 10};
+		//int[] nums = {2, 3, 7, 8, 10};
+//		int[] nums = {3,34,4,12,5,2};
+//		int N = nums.length;
+//		int S = 9;
+//		
+		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		int N = nums.length;
-		int S = 11;
+		int S = 18;
 		
 		SubsetSumExists s = new SubsetSumExists();
 		

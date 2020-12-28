@@ -24,7 +24,7 @@ public class DGraph {
         adjList[src].add(dest);
     }
 
-    public void breathFirstTraversal(int src) {
+    public void breadthFirstTraversal(int src) {
         boolean[] visited = new boolean[this.V];
 
         visited[src] = true;
@@ -63,7 +63,7 @@ public class DGraph {
 
         while(itr.hasNext()) {
             src = itr.next();
-
+            
             if(!visited[src]) {
                 depthFirstTraversal(src, visited);
             }

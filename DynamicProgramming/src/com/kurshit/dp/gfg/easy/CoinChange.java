@@ -28,8 +28,12 @@ public class CoinChange {
 		
 		if(C < 0)
 			return 0;
-
-		return waysOfCoinChangeRecursion(coins, N - 1, C) + waysOfCoinChangeRecursion(coins, N, C - coins[N-1]);
+		
+		if(coins[N-1] > C) {
+			return waysOfCoinChangeRecursion(coins, N - 1, C);
+		} else {
+			return waysOfCoinChangeRecursion(coins, N - 1, C) + waysOfCoinChangeRecursion(coins, N, C - coins[N-1]);
+		}	
 		
 	}
 	
@@ -55,8 +59,12 @@ public class CoinChange {
 			return cache[N][C];
 		}
 		
-		return cache[N][C] = waysOfCoinChangeRecursion(coins, N - 1, C) + waysOfCoinChangeRecursion(coins, N, C - coins[N-1]);
-		
+		if(coins[N-1] > C) {
+			return cache[N][C] = waysOfCoinChangeRecursion(coins, N - 1, C);
+		}
+		else {
+			return cache[N][C] = waysOfCoinChangeMemoization(coins, N - 1, C) + waysOfCoinChangeMemoization(coins, N, C - coins[N-1]);
+		}
 	}
 	
 	public static int waysOfCoinChangeTopdown(int[] coins, int N, int key) {

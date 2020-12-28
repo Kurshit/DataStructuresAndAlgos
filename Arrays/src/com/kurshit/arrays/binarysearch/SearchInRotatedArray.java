@@ -1,4 +1,4 @@
-package com.kurshit.arrays.search;
+package com.kurshit.arrays.binarysearch;
 
 public class SearchInRotatedArray {
 	

@@ -3,7 +3,7 @@ package com.kurshit.trees.binarytree.traversals;
 import com.kurshit.trees.binarytree.BTREE;
 import com.kurshit.trees.binarytree.BTREE.Node;
 
-public class PrintParentOffAllNodesAtGivenLevel {
+public class PrintParentOfAllNodesAtGivenLevel {
 
 	public int height(Node root) {
 		
@@ -48,7 +48,7 @@ public class PrintParentOffAllNodesAtGivenLevel {
 		
 		btree.createSampleBinaryTree1();
 		
-		PrintParentOffAllNodesAtGivenLevel p1 = new PrintParentOffAllNodesAtGivenLevel();
+		PrintParentOfAllNodesAtGivenLevel p1 = new PrintParentOfAllNodesAtGivenLevel();
 		
 		p1.printGivenLevel(btree.root, 3, null);
 		

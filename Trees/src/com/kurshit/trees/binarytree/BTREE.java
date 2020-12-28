@@ -6,7 +6,7 @@ import java.util.Queue;
 public class BTREE {
 
 	public Node root;	
-	
+
 	public static class Node {
 
 		public int data;
@@ -17,21 +17,21 @@ public class BTREE {
 		public Node(int data) {
 			this.data = data;
 		}
-		
+
 		public String toString() {
 			return String.valueOf(this.data);
 		}
 	}
-	
+
 	public Node getRoot() {
 		return root;
 	}
-	
+
 	public void add(final int data) {
 
 		if(this.root == null) {
-			 this.root = new Node(data);
-			 return;
+			this.root = new Node(data);
+			return;
 		}
 
 		Queue<Node> queue = new LinkedList<>();
@@ -58,12 +58,12 @@ public class BTREE {
 			}
 		}			
 	}
-	
+
 	public void preOrder() {
 		preOrder(this.root);
 		System.out.println();
 	}
-	
+
 	public int height(Node newRoot) {
 
 		if(newRoot ==null)
@@ -75,17 +75,17 @@ public class BTREE {
 		return Math.max(lheight, rheight);
 
 	}
-	
+
 	public void preOrder(final Node newRoot) {
-		
+
 		if(newRoot == null)
 			return;
-		
+
 		System.out.print(newRoot.data + " ");
 		preOrder(newRoot.left);
 		preOrder(newRoot.right);
 	}
-	
+
 	public void levelOrderTraversalNode(Node newRoot) {
 
 		if(newRoot == null) 
@@ -110,49 +110,49 @@ public class BTREE {
 		}
 
 	}
-	
+
 	public void inOrder() {
 		inOrder(this.root);
 		System.out.println();
 	}
-	
+
 	private void inOrder(final Node newRoot) {
 		if(newRoot == null)
 			return;
-		
+
 		inOrder(newRoot.left);
 		System.out.print(newRoot.data + " ");
 		inOrder(newRoot.right);
 	}
-	
+
 	public void postOrder() {
 		postOrder(this.root);
 		System.out.println();
 	}
-	
+
 	private void postOrder(final Node newRoot) {
 		if(newRoot == null)
 			return;
-		
+
 		postOrder(newRoot.left);
 		postOrder(newRoot.right);
 		System.out.print(newRoot.data + " ");
 	}
-	
+
 	public boolean contains(int data) {
 		return contains(this.root, data);
 	}
-	
+
 	private boolean contains(Node newRoot, int data) {
-		
-		
+
+
 		if(newRoot == null) {
 			return false;
 		}
-		
+
 		if(newRoot.data == data) 
 			return true;
-		
+
 		/*
 		 * Alternatively, Can be written as - 
 		 * 
@@ -161,10 +161,10 @@ public class BTREE {
 		 *	    return true;
 		 *	    
 		 */		
-		
+
 		return contains(newRoot.left, data) || contains(newRoot.right, data);
 	}
-	
+
 	public void createSampleBinaryTree1() {
 
 		add(10);
@@ -193,7 +193,7 @@ public class BTREE {
 
 
 	}
-	
+
 	public void createSampleBinaryTree5() {
 
 		add(10);
@@ -223,8 +223,33 @@ public class BTREE {
 
 
 	}
+
 	
-	
+	public void createSampleBinaryTreeAP() {
+
+		add(1);
+		add(3);
+		add(6);
+		add(5);
+		add(7);
+		add(11);
+		add(23);
+		
+
+		/*
+		 * 								1
+		 * 							/	     \
+		 * 						  3			   6
+		 * 					   /     \       /      \
+		 *                   5       7     11       23
+		 * 				  
+		 * 				 
+		 */
+
+
+
+	}
+
 	public void createMaxPathSubTree1() {
 
 		root = new Node(-10);
@@ -232,7 +257,7 @@ public class BTREE {
 		root.right = new Node(20);
 		root.right.left = new Node(15);
 		root.right.right = new Node(7);
-		
+
 
 		/*
 		 * 							   -10
@@ -269,6 +294,40 @@ public class BTREE {
 
 	}
 
+	public void createSampleForEdgeRemoval() {
+			
+		root = new Node(1); 
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.left.left = new Node(4);
+		root.left.right = new Node(5);
+		
+		root.right.left = root.left.right;		
+		
+
+		/*
+				  	   1
+					  / \
+					 2   3
+					/ \ /
+				   4   5
+		
+		 */
+
+		/*
+		 * 								10
+		 * 							/	     \
+		 * 						  5			   20
+		 * 					   /     
+		 *                   9       
+		 * 		
+		 */
+
+
+
+	}
+
+
 	//WIth duplicateLeafNode
 
 	public void createSampleBinaryTree3() {
@@ -300,6 +359,27 @@ public class BTREE {
 
 	}
 
+	public void createSampleForCoinDistribution() {
+
+		add(1);
+		add(0);
+		add(0);
+		add(3);
+
+
+		/*
+		 * 								1
+		 * 							/	     \
+		 * 						  0			   0
+		 * 					   /     
+		 * 					3	
+		 * 
+		 */
+
+
+
+	}
+
 	public void createSampleBinaryTree4() {
 
 		add(10);
@@ -313,12 +393,12 @@ public class BTREE {
 		add(80);
 		add(50);
 		add(60);
-		
+
 		add(70);
 		add(80);
 		add(90);
 		add(100);
-		
+
 		add(110);
 		add(120);
 		add(130);
@@ -336,13 +416,13 @@ public class BTREE {
 		 * 				/  \  /   \
 		 * 			 110  120 130 140
 		 * 
- 		 */
+		 */
 
 
 
 	}
 
-	
+
 	public void createSumTree() {
 
 		add(50);
@@ -353,7 +433,7 @@ public class BTREE {
 		add(27);
 		add(3);
 		add(15);
-		
+
 
 		/*
 		 * 								50
@@ -364,12 +444,12 @@ public class BTREE {
 		 * 				  /      
 		 * 				 15
 		 * 
- 		 */
+		 */
 
 
 
 	}
-	
+
 	public void createSumTreeLeftRight() {
 
 		add(26);
@@ -378,14 +458,14 @@ public class BTREE {
 		add(4);
 		add(6);
 		add(3);		
-		
-		 /*
+
+		/*
 		 *
 		 *     	  	  26
-	     *   		/   \
-	     * 		   10     3
-	     *		 /    \     \
-	  	 *		4      6      3
+		 *   		/   \
+		 * 		   10     3
+		 *		 /    \     \
+		 *		4      6      3
 		 *
 		 */
 
@@ -396,20 +476,20 @@ public class BTREE {
 	public void createUncoveredCoveredSumTree() {
 
 		root = new Node(10); 
-        root.left = new Node(20);
-        root.right = new Node(30);
-        root.left.left = new Node(40); 
-        root.left.right = new Node(50);
-        root.right.left = new Node(60);
-        root.right.right = new Node(70);
-        root.left.left.left = new Node(80);
-        
-        root.left.right.left = new Node(45);
-         
-        root.left.right.right = new Node(100); 
-        
-         
-        root.left.left.left.right = new Node(5); 
+		root.left = new Node(20);
+		root.right = new Node(30);
+		root.left.left = new Node(40); 
+		root.left.right = new Node(50);
+		root.right.left = new Node(60);
+		root.right.right = new Node(70);
+		root.left.left.left = new Node(80);
+
+		root.left.right.left = new Node(45);
+
+		root.left.right.right = new Node(100); 
+
+
+		root.left.left.left.right = new Node(5); 
 
 		/*
 		 * 								10
@@ -421,7 +501,7 @@ public class BTREE {
 		 * 				 80         45   100
 		 *                 \
 		 * 					5
- 		 */
+		 */
 
 
 
