@@ -41,12 +41,12 @@ public class IsBipartiteGraph {
 	
 	
 	/*
-	 * THe following approach works for connected undirected graph where we always begin from source vertex 0 assuming all vertices
-	 * are visible from this source node.
+	 * THe following approach works for connected undirected graph where we always begin from source vertex 0 assuming 
+	 * all vertices are visible from this source node.
 	 * 
 	 * To make it work for disconnected graph, call isBipartitie for every non visited vertex from the for loop.
 	 * 
-	 * The following is for graph represnted as adjacency list.
+	 * The following is for graph represented as adjacency list.
 	 */
 	public static boolean isBipartitie(UGraph graph) {
 		

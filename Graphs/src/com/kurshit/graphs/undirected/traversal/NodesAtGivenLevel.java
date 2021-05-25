@@ -106,8 +106,7 @@ public class NodesAtGivenLevel {
 			if(!visited[dest]) {
 				dfs(graph, dest, visited, dist, dist[src] + 1);
 			}
-		}
-		
+		}		
 	}
 	
 

@@ -17,7 +17,7 @@ package com.kurshit.graphs.undirected.traversal;
 
 import com.kurshit.graphs.undirected.UGraph;
 
-public class CheckIfTwoNodesAreAtSameLevel {
+public class CheckIfTwoNodesAreAtSamePathInNTree {
 
 	public static void main(String[] args) {
 		

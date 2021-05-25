@@ -1,6 +1,6 @@
 package com.kurshit.arrays.optimization.profit;
 
-/*Problem Source : https://www.geeksforgeeks.org/stock-buy-sell/
+/* Problem Source : https://www.geeksforgeeks.org/stock-buy-sell/
  * 
  * Problem : The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in 
  * those days. For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the maximum profit can earned by buying 

@@ -33,7 +33,8 @@ public class DLinkedList {
 		DLNode newNode = new DLNode(data);
 		
 		if(head == null) {
-			head = newNode;			
+			head = newNode;		
+			newNode.prev = head;
 			return;
 		}
 		

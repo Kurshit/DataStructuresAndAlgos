@@ -32,9 +32,8 @@ public class PrintSumOfAllNodes {
 		if(root == null)
 			return 0;
 
-		sum =  sum + root.data + sumAll(root.left, sum) + sumAll(root.right, sum);
+		return root.data + sumAll(root.left, sum) + sumAll(root.right, sum);
 
-		return sum;
 
 	}
 	

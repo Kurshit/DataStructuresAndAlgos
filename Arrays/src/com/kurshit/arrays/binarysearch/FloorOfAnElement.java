@@ -43,7 +43,7 @@ public class FloorOfAnElement {
 			// If last element is smaller than x 
 			if (key >= arr[high]) 
 				return high; 
-
+                                                                                                               
 			// Find the middle point 
 			int mid = (low + high) / 2; 
 

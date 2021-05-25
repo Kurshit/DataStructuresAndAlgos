@@ -164,6 +164,40 @@ public class BST {
 
 	}
 	
+	public void createSampleTreeHackerRank() {
+		
+		add(8);
+		add(4);
+		add(2);
+		add(1);
+		add(3);
+		add(6);
+		add(5);
+		add(7);
+		add(10);
+		add(14);
+		add(15);
+		add(9);
+		add(12);
+		add(11);
+		add(13);
+		
+		
+		/*
+		 * 							  50
+		 * 					     /         \
+ 		 *  				 30               70
+		 *              /         \      /         \
+		 *           20           40   60            80
+		 *        /      \     /   \              /      \
+		 *      15      25   35     45          75        85
+		 *     / 
+		 *    10  
+		 *      
+		 */
+
+	}
+	
 	public void createSampleForEdgeRemoval() {
 		
 		root = new Node(3); 

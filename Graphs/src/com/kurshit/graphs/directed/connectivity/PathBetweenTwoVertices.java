@@ -45,11 +45,6 @@ public class PathBetweenTwoVertices {
 		System.out.println(p.checkIfPathExistUsingBFS(graph, 1, 0));
 		System.out.println(p.checkIfPathExistUsingBFS(graph, 2, 2)); // self loop -- returns wrong result
 		System.out.println(p.checkIfPathExistUsingBFS(graph, 3, 1));
-			
-			
-		
-		
-
 	}
 	
 	/*

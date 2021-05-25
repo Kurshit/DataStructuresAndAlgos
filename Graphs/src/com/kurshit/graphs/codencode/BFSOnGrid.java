@@ -27,7 +27,7 @@ public class BFSOnGrid {
 		queue.offer(new int[]{x,y});
 		
 		visited[x][y] = true;
-		//Directions U, R, D, L
+		//Directions L, U, R, D
 		int[] dx = {-1, 0, 1, 0};
 		int[] dy = {0, 1, 0, -1};
 		

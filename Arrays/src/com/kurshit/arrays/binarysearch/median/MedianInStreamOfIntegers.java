@@ -17,19 +17,34 @@ public class MedianInStreamOfIntegers {
 
 	void add(int num) {
 		
-		if (!minHeap.isEmpty() && num < minHeap.peek()) {
-			
-			maxHeap.offer(num);
-			if (maxHeap.size() > minHeap.size() + 1) {
-				minHeap.offer(maxHeap.poll());
-			}
-		} else {
 		
+		if(maxHeap.isEmpty() || num < maxHeap.peek()) {
+			maxHeap.offer(num);
+		} else {
 			minHeap.offer(num);
-			if (minHeap.size() > maxHeap.size() + 1) {
-				maxHeap.offer(minHeap.poll());
-			}
 		}
+		
+		if(maxHeap.size() > minHeap.size() + 1) {
+			minHeap.offer(maxHeap.poll());
+		} else if(minHeap.size() > maxHeap.size() + 1) {
+			maxHeap.offer(minHeap.poll());
+		}
+		
+		
+		
+//		if (!minHeap.isEmpty() && num < minHeap.peek()) {
+//			
+//			maxHeap.offer(num);
+//			if (maxHeap.size() > minHeap.size() + 1) {
+//				minHeap.offer(maxHeap.poll());
+//			}
+//		} else {
+//		
+//			minHeap.offer(num);
+//			if (minHeap.size() > maxHeap.size() + 1) {
+//				maxHeap.offer(minHeap.poll());
+//			}
+//		}
 	}
 
 	double getMedian() {

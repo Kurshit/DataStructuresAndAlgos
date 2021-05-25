@@ -55,7 +55,7 @@ class DiagonalTraversalIterative
 
 					// if left child is present 
 					// add into queue 
-					if (temp.left!=null) 
+					if (temp.left != null) 
 						q.add(temp.left); 
 
 					// current equals to right child 

@@ -13,7 +13,7 @@ public class CycleForUndirectedGaraphDFS {
 		graph.addEdge(1, 3);
 		graph.addEdge(2, 3);
 		graph.addEdge(3, 4);
-		//expevcted - true
+		//expected - true
 		System.out.println(hasCycle(graph));
 		
 		UGraph graph1 = new UGraph(5);

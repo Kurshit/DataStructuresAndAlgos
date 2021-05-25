@@ -27,7 +27,7 @@ package com.kurshit.matrix.gfg;
  */
 
 /* 
- * Solution Idea: Read source url to see algo
+ * Solution Idea: Read source url0 to see algo
  */
 
 public class SpiralForm {
@@ -35,9 +35,10 @@ public class SpiralForm {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[][] arr = { {1, 2, 3, 4},
-				{5,6,7,8},
-				{9,10,11,12},
+		int[][] arr = 
+			  { {1, 2, 3, 4},
+				{5, 6, 7, 8},
+				{9, 10,11,12},
 				{13,14,15,16}				
 		};
 
@@ -54,49 +55,49 @@ public class SpiralForm {
 	 */	
 
 
-	public static void spiralForm(int[][] arr, int m, int n) {
-		int i;
-		int sr = 0, sc = 0;
+	public static void spiralForm(int[][] arr, int R, int C) {
+				
+		int top = 0, down = R - 1;
 
-		int er = m, ec = n;
-
+		int left = 0, right = C - 1;
+		
+		int dir = 0;
+		
 		/*
-		 * sr - starting row index
-		 * er - ending row index
-		 * sc - starting column index
-		 * ec - ending column index
+		 * top - starting row index
+		 * down - ending row index
+		 * left - starting column index
+		 * right - ending column index
 		 */
 
-		while (sr < er && sc < ec) {
-			// Print the first row from the remaining rows
-			for (i = sc; i < ec; i++) {
-				System.out.print(arr[sr][i] + " ");
-			}
-			sr++;
-
-			// Print the last column from the remaining
-			// columns
-			for (i = sr; i < er; i++) {
-				System.out.print(arr[i][ec - 1] + " ");
-			}
-			ec--;
-
-			// Print the last row from the remaining rows */
-			if (sr < er) {
-				for (i = ec - 1; i >= sc; i--) {
-					System.out.print(arr[er - 1][i] + " ");
+		while (top <= down && left <= right) {
+			//Left to right
+			if(dir == 0) {
+				for (int i = left; i <= right; i++) {
+					System.out.print(arr[top][i] + " ");
+					
 				}
-				er--;
-			}
-
-			// Print the first column from the remaining
-			// columns */
-			if (sc < ec) {
-				for (i = er - 1; i >= sr; i--) {
-					System.out.print(arr[i][sc] + " ");
+				top++;
+			} else if(dir == 1) {
+				for(int i = top; i <= down; i++) {
+					System.out.println(arr[i][right]);
+					
 				}
-				sc++;
+				right--;
+			} else if(dir == 2) {
+				for(int i = right; i >= left; i-- ) {
+					System.out.println(arr[down][i]);					
+				}
+				down--;
+			} else if(dir == 3) {
+				for(int i = down; i >= top; i--) {
+					System.out.println(arr[i][left]);
+				}
+				left++;
 			}
+			
+		 
+			dir = (dir+1) % 4;			
 		}		
 	}
 

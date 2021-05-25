@@ -39,6 +39,7 @@ public class RootToLeafPathForGivenTotalSum {
 		int targetSum = 104; 
 		
 		pathForGivenSum(btree.getRoot(), targetSum);
+		System.out.println(allPathForGivenSum(btree.root, targetSum));
 		
 		BTREE btree1 = new BTREE();
 		
@@ -59,7 +60,7 @@ public class RootToLeafPathForGivenTotalSum {
 		
 		targetSum = 244;
 		pathForGivenSum(btree1.getRoot(), targetSum);
-		
+		System.out.println(allPathForGivenSum(btree1.root, targetSum));
 		
 	}
 	
@@ -101,6 +102,33 @@ public class RootToLeafPathForGivenTotalSum {
 		
 		return false;
 	}
+	
+	public static List<List<Integer>> allPathForGivenSum(Node root, int targetSum) {
+		
+		List<List<Integer>> result = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        paths(root, result, list, targetSum);
+        return result;
+        
+	}
+	
+	public static void paths(Node root, List<List<Integer>> result, List<Integer> list, int targetSum) {
+        
+        if(root == null)
+            return;
+        
+        list.add(root.data);
+        
+        if(targetSum == root.data) {            
+            result.add(new ArrayList<Integer>(list));
+        }
+        targetSum = targetSum - root.data;
+        paths(root.left, result, list, targetSum);
+        paths(root.right, result, list, targetSum );
+        
+        list.remove(list.size() - 1);
+        targetSum = targetSum + root.data;
+    }
 	
 
 }

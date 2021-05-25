@@ -38,7 +38,7 @@ public class MiddleOfLinkedList {
 			return null;
 		count= count + 1;
 		max.maxCount = count;
-		SLNode result =middleOfSLLRecursively(head.next, max, count);
+		SLNode result = middleOfSLLRecursively(head.next, max, count);
 		
 		if(result != null)
 			return result;

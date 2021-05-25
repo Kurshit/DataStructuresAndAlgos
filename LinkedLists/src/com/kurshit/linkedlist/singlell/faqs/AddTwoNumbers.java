@@ -122,10 +122,10 @@ public class AddTwoNumbers {
 			{ 
 				cur = temp; 
 				temp = temp.next; 
-			} 
+			}
 
 			// get addition of same size lists 
-			addSameSize(cur, head2); 
+			addSameSize(cur, head2);
 
 			// get addition of remaining first list and carry 
 			propogatecarry(head1); 

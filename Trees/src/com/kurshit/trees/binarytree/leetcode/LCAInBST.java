@@ -6,6 +6,7 @@ import com.kurshit.trees.binarytree.bst.BST.Node;
 public class LCAInBST {
 	
 	public Node lcaRecursively(Node root, int n1, int n2) {
+		
 		if(root == null)
 			return null;
 		
@@ -123,6 +124,15 @@ public class LCAInBST {
 		
 		
 		System.out.println();
+		
+		BST bst1 = new BST();
+		
+		bst1.createSampleTreeHackerRank();
+		
+		n1 = 15;
+		n2 = 11;
+		
+		System.out.println(lca.lcaRecursively(bst1.root, n1, n2).data);
 		
 	}
 

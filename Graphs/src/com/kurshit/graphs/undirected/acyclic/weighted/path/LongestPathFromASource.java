@@ -72,7 +72,7 @@ public class LongestPathFromASource {
 
 		for(UPair pair : graph.adjList[src]) {
 			if(!visited[pair.dest]) {
-				dfs(graph, pair.dest, visited, dist, currDist + pair.weight);
+				dfs(graph, pair.dest, visited, dist, dist[src] + pair.weight);
 			}
 		}		
 	}	

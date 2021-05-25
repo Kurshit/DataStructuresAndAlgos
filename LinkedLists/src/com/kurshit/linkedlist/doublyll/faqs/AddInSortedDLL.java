@@ -6,6 +6,7 @@ import com.kurshit.linkedlist.doublyll.DLinkedList.DLNode;
 public class AddInSortedDLL {
 	
 	public void addInSortedDLL(DLNode head, int data) {
+		
 		DLNode newNode = new DLNode(data);
 		
 		if(head == null) {

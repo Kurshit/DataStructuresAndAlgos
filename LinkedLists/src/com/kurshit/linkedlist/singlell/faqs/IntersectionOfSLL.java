@@ -42,9 +42,7 @@ public class IntersectionOfSLL {
 				h1 = h1.next;
 				h2 = h2.next;
 				ptr = ptr.next;
-			}
-
-						
+			}						
 
 		}		
 

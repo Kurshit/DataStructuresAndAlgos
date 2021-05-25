@@ -28,13 +28,14 @@ public class DFSOnGrid {
 		System.out.println(x + " " + y );
 
 
-		dfs(x - 1, y, M, N, visited);   // up
+		dfs(x - 1, y, M, N, visited);   // Left
 
-		dfs(x , y + 1, M, N, visited);  // right
+		dfs(x , y + 1, M, N, visited);  // Up
 
 
-		dfs(x + 1, y, M, N, visited); // down
-		dfs(x , y - 1, M, N, visited); // left 
+		dfs(x + 1, y, M, N, visited); // Right
+		
+		dfs(x , y - 1, M, N, visited); // Down 
 
 
 

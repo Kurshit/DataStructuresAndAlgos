@@ -5,12 +5,12 @@ public class MedianOfTwoSortedArrayVarSize {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int ar1[] = { 900 };
-	    int ar2[] = { 5, 8, 10, 20 };
-	 
-	    int n = ar1.length;
-	    int m = ar2.length;
-	    
-	    System.out.println(getMedian(ar1, ar2, n, m));
+		int ar2[] = { 5, 8, 10, 20 };
+
+		int n = ar1.length;
+		int m = ar2.length;
+
+		System.out.println(getMedian(ar1, ar2, n, m));
 	}
 
 	static int getMedian(int ar1[], int ar2[], 
@@ -31,20 +31,14 @@ public class MedianOfTwoSortedArrayVarSize {
 		//index is median i.e. (m+n)/2  
 		if ((m + n) % 2 == 1) 
 		{
-			for(count = 0; 
-					count <= (n + m) / 2; 
-					count++)
-			{
-				if (i != n && j != m) 
-				{
+			for(count = 0; count <= (n + m) / 2; count++) {
+				
+				if (i != n && j != m) {
 					m1 = (ar1[i] > ar2[j]) ? 
 							ar2[j++] : ar1[i++];
-				} 
-				else if (i < n)
-				{
+				} else if (i < n) {
 					m1 = ar1[i++];
 				}
-
 				// for case when j<m,
 				else
 				{
@@ -60,10 +54,7 @@ public class MedianOfTwoSortedArrayVarSize {
 		// ar1 and ar2
 		else
 		{
-			for(count = 0; 
-					count <= (n + m) / 2;
-					count++)
-			{
+			for(count = 0; count <= (n + m) / 2; count++) {
 				m2 = m1;
 				if (i != n && j != m) 
 				{

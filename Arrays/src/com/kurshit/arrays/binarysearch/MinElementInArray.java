@@ -69,7 +69,7 @@ public class MinElementInArray {
 			// Decide whether we need to go to left half or right half 
 			if (arr[high] > arr[mid]) 
 				high = mid-1;
-			else  
+			else				
 				low = mid + 1;
 		}        
 
