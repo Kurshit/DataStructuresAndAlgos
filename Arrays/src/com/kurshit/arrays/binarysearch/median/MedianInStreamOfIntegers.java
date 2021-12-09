@@ -17,7 +17,6 @@ public class MedianInStreamOfIntegers {
 
 	void add(int num) {
 		
-		
 		if(maxHeap.isEmpty() || num < maxHeap.peek()) {
 			maxHeap.offer(num);
 		} else {
@@ -29,8 +28,6 @@ public class MedianInStreamOfIntegers {
 		} else if(minHeap.size() > maxHeap.size() + 1) {
 			maxHeap.offer(minHeap.poll());
 		}
-		
-		
 		
 //		if (!minHeap.isEmpty() && num < minHeap.peek()) {
 //			

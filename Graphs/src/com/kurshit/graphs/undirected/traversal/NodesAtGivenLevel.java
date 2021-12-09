@@ -14,6 +14,14 @@ import com.kurshit.graphs.undirected.UGraph;
  * This is basically a n-ary tree
  */
 
+/*
+	Questions :
+		1. Since it is a tree there won't be any cycle ? No Self loop thus ?
+		2. Is Graph connected ?
+		3. Graph is undirected since it is a tree ?
+
+ */
+
 public class NodesAtGivenLevel {
 
 	public static void main(String[] args) {
@@ -40,10 +48,14 @@ public class NodesAtGivenLevel {
 		int targetLevel = 2;
 		System.out.println(getCountOfNodesAtGivenLevelBFS(graph, src, targetLevel));
 		System.out.println(getCountOfNodesAtGivenLevelDFS(graph, src, targetLevel));
-		
 
 	}
-	
+
+	/*
+	 	TC : O(V + E)
+	 	SC : O(V)
+	 */
+
 	public static int getCountOfNodesAtGivenLevelBFS(UGraph graph, int src, int targetLevel) {
 		
 		boolean[] visited = new boolean[graph.V];

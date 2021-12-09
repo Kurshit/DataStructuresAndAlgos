@@ -13,7 +13,7 @@ public class MedianOfTwoSortedArrayVarSize {
 		System.out.println(getMedian(ar1, ar2, n, m));
 	}
 
-	static int getMedian(int ar1[], int ar2[], 
+	static double getMedian(int ar1[], int ar2[],
 			int n, int m)
 	{
 

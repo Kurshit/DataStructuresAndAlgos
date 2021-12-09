@@ -25,6 +25,10 @@ public class TransposeOfAGraph {
         graph.breathFirstTraversalForTranspose(2);
     }
 
+    /*
+        TC : O (V + E)
+     */
+
     public void getTranspose(TransposeGraph graph, int V) {
         boolean[] visited = new boolean[V];
 

@@ -20,7 +20,8 @@ public class BuyAndSellStocksAnyNumberOfTimes {
 		System.out.println(getMxProfit(arr));
 		
 		//expected - 5
-		int[] arr1 = {7,1,5,3,6,4};
+		//int[] arr1 = {7,1,5,3,6,4};
+		int[] arr1 = {1, 3, 8, 20, 100}; //
 		System.out.println(getMxProfit(arr1));
 		
 		int[] arr2 = {7,6,4,3,1};

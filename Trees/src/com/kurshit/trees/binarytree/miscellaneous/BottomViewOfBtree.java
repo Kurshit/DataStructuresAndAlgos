@@ -5,8 +5,10 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
 
+//import com.kurshit.trees.binarytree.BTREE.Node;
+//import com.kurshit.trees.binarytree.BTREE;
+
 import com.kurshit.trees.binarytree.BTREE;
-import com.kurshit.trees.binarytree.BTREE.Node;
 import com.kurshit.trees.binarytree.SampleBinaryTrees;
 
 public class BottomViewOfBtree {
@@ -30,12 +32,12 @@ public class BottomViewOfBtree {
 		bottomViewOfBtree(btree.getRoot());
 	}
 	
-	public static void bottomViewOfBtree(Node root) {
+	public static void bottomViewOfBtree(BTREE.Node root) {
 		
 		if(root == null)
 			return;
 		
-		Queue<Node> queue = new LinkedList<>();
+		Queue<BTREE.Node> queue = new LinkedList<>();
 		root.hd = 0;
 		queue.add(root);
 		
@@ -43,7 +45,7 @@ public class BottomViewOfBtree {
 		
 		while(!queue.isEmpty()) {
 			
-			Node temp = queue.poll();
+			BTREE.Node temp = queue.poll();
 			
 			nodesMap.put(temp.hd, temp.data);
 			

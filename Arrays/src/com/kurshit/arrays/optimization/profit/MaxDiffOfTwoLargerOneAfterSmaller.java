@@ -73,7 +73,7 @@ public class MaxDiffOfTwoLargerOneAfterSmaller {
 	/*
 	 * Approach 2 : Min element and LtoR - O(n)
 	 * 
-	 *  Chosing min element at as we go from L to R in array and keeping the diff or every arr[i] with min in maxSoFar.
+	 *  Choosing min element at as we go from L to R in array and keeping the diff or every arr[i] with min in maxSoFar.
 	 *  
 	 */
 	

@@ -38,7 +38,7 @@ public class LargestSumRootToLeafPath {
 		 * 							/	     \
 		 * 						  5			   20
 		 * 					   /     \       /      \
-		 *                   9       7     30       40
+		 *           9       7     30       40
 		 * 				  /    \    / \    
 		 * 				 70    80  50  60 
 		 */

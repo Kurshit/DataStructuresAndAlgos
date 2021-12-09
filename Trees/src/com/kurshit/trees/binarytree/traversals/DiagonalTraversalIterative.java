@@ -22,7 +22,7 @@ class DiagonalTraversalIterative
 		if (root == null) 
 			return; 
 
-		// inbuilt queue of Treenode 
+		// inbuilt queue of Tree node
 		Queue<Node> q= new LinkedList<Node>(); 
 
 		// add root 

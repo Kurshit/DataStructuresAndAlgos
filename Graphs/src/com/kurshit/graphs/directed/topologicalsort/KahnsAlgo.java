@@ -56,14 +56,12 @@ public class KahnsAlgo {
 			count++;
 			
 		}
-		
+		//this indicates there is a cycle in graph
 		if(count != graph.V) {
 			return new int[] {};
 		}
 		
 		return result;
-		
-		
 	}
 	
 	/*

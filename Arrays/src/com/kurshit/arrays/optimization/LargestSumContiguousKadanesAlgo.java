@@ -20,8 +20,6 @@ public class LargestSumContiguousKadanesAlgo {
 		//Expected 7
 		System.out.println(getMaxSum(arr, arr.length));
 		printStartAndEndIndexes(arr, arr.length);
-		
-		
 				
 	}
 	

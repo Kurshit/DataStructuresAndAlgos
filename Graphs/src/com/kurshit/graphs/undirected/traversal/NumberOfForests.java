@@ -16,6 +16,11 @@ public class NumberOfForests {
         System.out.println(nf.numberOfForests(graph,5));
     }
 
+    /*
+        TC : O(V + E)
+
+     */
+
     public int numberOfForests(UGraph graph, int V) {
         boolean[] visited = new boolean[V];
         int forestsCount = 0;

@@ -6,6 +6,11 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+
+/*
+    Questions : 1. Shoud it contain cycles ? No it cant - or you get infinity path
+ */
+
 public class PrintAllPaths {
 
     public static void main(String[] args) {
@@ -22,6 +27,8 @@ public class PrintAllPaths {
             cp.printAllPathsDFS(graph, 0, 4);
 
     }
+
+
 
     public void printAllPathsDFS(DGraph graph, int src, int dest) {
         List<Integer> pathsList = new LinkedList<>();

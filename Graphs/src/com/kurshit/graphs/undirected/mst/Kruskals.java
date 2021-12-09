@@ -54,13 +54,10 @@ public class Kruskals {
 
 		Edge[] result = new Edge[graph.V-1];
 
-		
-
 		for(int i = 0; i < graph.V-1; i++)
 			result[i] = new Edge();
 
 		Arrays.sort(graph.edges);
-		
 
 		int ptr = 0;  //pointer to sorted set of edges
 		int e = 0; // pointer to resultant set of edges
@@ -82,10 +79,8 @@ public class Kruskals {
 				result[e] = nextEdge;
 				e++;
 				FindUnion.union(parent, x, y);
-			}		
-
+			}
 		}
-
 		return result;
 	}
 

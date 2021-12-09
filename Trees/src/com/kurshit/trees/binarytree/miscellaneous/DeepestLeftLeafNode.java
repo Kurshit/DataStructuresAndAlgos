@@ -17,11 +17,11 @@ public class DeepestLeftLeafNode {
 		/*
 		 * 								10
 		 * 							/	     \
-		 * 						  5			   20
-		 * 					   /     \       /      \
-		 *                   9       7     30       40
-		 * 				  /    \    / \    
-		 * 				 70    80  50  60 
+		 * 	 				  5			   20
+		 * 				   /     \       /      \
+		 *         9       7     30       40
+		 *  		  /    \    / \
+		 * 	  	 70    80  50  60
 		 */
 
 		System.out.println("Deepest left most leaf node is : " + deepestLeftLeafNode(btree.getRoot()));

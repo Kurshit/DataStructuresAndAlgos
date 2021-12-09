@@ -11,19 +11,19 @@ class RotateMatrixAnti
 		int n = N;
 
 		// transpose matrix
-		for (int x = 0; x < n; x++) {
-			for (int y = x; y < n; y++) {
-				int tmp = matrix[y][x];
-				matrix[y][x] = matrix[x][y];
-				matrix[x][y] = tmp;
+		for (int i = 0; i < n; i++) {
+			for (int j = i; j < n; j++) {
+				int tmp = matrix[j][i];
+				matrix[j][i] = matrix[i][j];
+				matrix[i][j] = tmp;
 			}
 		}
-		// reverse each column
-		for (int x = 0; x < n; x++) {
-			for (int y = 0; y < n/2 ; y++) {
-				int tmp = matrix[x][y];
-				matrix[x][y] = matrix[x][n - 1 - y];
-				matrix[x][n - 1 - y] = tmp;
+		// reverse each row
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n/2 ; j++) {
+				int tmp = matrix[i][j];
+				matrix[i][j] = matrix[i][n - 1 - j];
+				matrix[i][n - 1 - j] = tmp;
 			}
 		}
 	}
@@ -40,7 +40,7 @@ class RotateMatrixAnti
 				matrix[x][y] = tmp;
 			}
 		}
-		// reverse each row
+		// reverse each column
 		for (int y = 0; y < n; y++) {
 			for (int x = 0; x < n/2 ; x++) {
 				int tmp = matrix[x][y];

@@ -18,7 +18,6 @@ public class MaximumSumSubarrayOfSizeK {
 	
 	public static int getMaxSize(int[] arr, int N, int K) {
 		
-		
 		int i = 0, j = 0;
 		int maxSum = 0;
 		int sum = 0;

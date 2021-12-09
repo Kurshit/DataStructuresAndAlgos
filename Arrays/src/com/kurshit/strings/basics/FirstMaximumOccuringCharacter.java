@@ -7,6 +7,41 @@ package com.kurshit.strings.basics;
  * 
  */
 
+/*
+	String s = "appdirect";
+
+	a - 1
+	p - 2
+	d - 1
+	i - e
+	r - 1
+	e - 1
+	c - 1
+	t - 1
+
+	Output : p
+
+	String s = "simple;
+
+	s - 1
+	i - 1
+	m - 1
+	p -1
+	l - 1
+	e - 1
+
+	Output : s
+
+	String s = ababc
+
+	a - 2
+	b - 2
+	c - 1
+
+	Output : a
+
+ */
+
 
 public class FirstMaximumOccuringCharacter {
 

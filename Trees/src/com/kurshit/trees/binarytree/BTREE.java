@@ -13,6 +13,7 @@ public class BTREE {
 		public Node left, right;
 		public int hd;
 		public int vd;
+		public Node parent;
 
 		public Node(int data) {
 			this.data = data;
@@ -39,7 +40,7 @@ public class BTREE {
 		queue.offer(this.root);
 
 
-		while(!queue.isEmpty()) { 
+		while(!queue.isEmpty()) {
 
 			Node temp = queue.poll();
 
@@ -56,7 +57,7 @@ public class BTREE {
 			} else {
 				queue.offer(temp.right);
 			}
-		}			
+		}
 	}
 
 	public void preOrder() {
@@ -244,6 +245,56 @@ public class BTREE {
 		 *                   5       7     11       23
 		 * 				  
 		 * 				 
+		 */
+
+
+
+	}
+
+	public void createSampleBinaryTreeFlatten() {
+
+		add(1);
+		add(2);
+		add(5);
+		add(3);
+		add(4);
+		add(6);
+		add(7);
+
+
+		/*
+		 * 								1
+		 * 							/	     \
+		 * 						  2			   5
+		 * 					   /     \       /      \
+		 *                   3       4     6       7
+		 *
+		 *
+		 */
+
+
+
+	}
+
+	public void createSampleBinaryTreeForest() {
+
+		add(1);
+		add(2);
+		add(3);
+		add(4);
+		add(5);
+		add(6);
+		add(7);
+
+
+		/*
+		 * 								1
+		 * 							/	     \
+		 * 						  2			   3
+		 * 					   /     \       /      \
+		 *                   4       5     6        7
+		 *
+		 *
 		 */
 
 

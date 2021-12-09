@@ -21,7 +21,6 @@ public class InOrderIterative {
 		Stack<Node> stack = new Stack<>();
 		
 		Node curr = root;
-		
 				
 		while(curr != null || stack.size() > 0) {
 			

@@ -27,7 +27,8 @@ public class SerializeAndDeserialize {
 	// Encodes a tree to a single string.
 	public String serialize(Node root) {
 		String result = rserialize(root, "");
-		return result.substring(0,result.length()-1);
+		return result.substring(0,result.length()-1); //substring -1 to avoid extra comma
+		//return result;
 	}
 
 

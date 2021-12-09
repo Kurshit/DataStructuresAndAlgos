@@ -42,10 +42,7 @@ public class AddTwoNumbersUlta {
 			
 			int sum = carry + first + second;
 			
-			if(sum >= 10)
-				carry = 1;
-			else 
-				carry = 0;
+			carry = sum / 10;
 			
 			sum = sum % 10;
 			
@@ -89,14 +86,17 @@ public class AddTwoNumbersUlta {
 
 		LinkedList sll1 = new LinkedList();
 
+
+		// 7 -> 4 -> 5
 		sll1.createIntegerToAddSLL1();
 
 		LinkedList sll2 = new LinkedList();
 
+		// 2 -> 3 -> 6
 		sll2.createIntegerToAddSLL2();
 
 		AddTwoNumbersUlta add = new AddTwoNumbersUlta();
-
+		//ans:   9 -> 7 -> 1 -> 1
 		SLNode result = add.addTwoUlteNumbers(sll1.head, sll2.head);
 
 		sll1.printGivenList(result);

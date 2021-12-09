@@ -56,16 +56,16 @@ public class AddTwoNumbers {
 	void propogatecarry(SLNode head1) 
 	{ 
 		// If diff. number of nodes are not traversed, add carry 
-		if (head1 != cur) 
-		{ 
-			propogatecarry(head1.next); 
-			int sum = carry + head1.data; 
-			carry = sum / 10; 
-			sum %= 10; 
+		if (head1 != cur)
+		{
+			propogatecarry(head1.next);
+			int sum = carry + head1.data;
+			carry = sum / 10;
+			sum %= 10;
 
-			// add this node to the front of the result 
-			addFirst(sum); 
-		} 
+			// add this node to the front of the result
+			addFirst(sum);
+		}
 	} 
 
 	int getSize(SLNode head) 
@@ -108,8 +108,8 @@ public class AddTwoNumbers {
 		{ 
 			// First list should always be larger than second list. 
 			// If not, swap pointers 
-			if (size1 < size2) 
-			{ 
+			if (size1 < size2)
+			{
 				SLNode temp = head1; 
 				head1 = head2; 
 				head2 = temp; 

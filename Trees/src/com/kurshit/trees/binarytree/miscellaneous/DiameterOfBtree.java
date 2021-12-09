@@ -7,7 +7,7 @@ import com.kurshit.trees.binarytree.SampleBinaryTrees;
 /*
  * The program is to find the diameter of a B-tree. 
  * 
- * Diamater of BTREE : Number of nodes on longest path from two node ends
+ * Diameter of BTREE : Number of nodes on longest path from two node ends
  */
 
 public class DiameterOfBtree {
